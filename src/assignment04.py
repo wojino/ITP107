@@ -6,10 +6,13 @@ tvshows = {}
 ratings = {}
 
 def input_filename():
-    filename = input('Enter the filename: ')
+    if len(sys.argv) != 2:
+        print('Usage: python3 assignment04.py <filename>')
+        sys.exit(1)
 
-    if not filename or not os.path.isfile(filename):
-        print('Invalid filename')
+    filename = sys.argv[1]
+    if not os.path.isfile(filename):
+        print(f'{filename} does not exist')
         sys.exit(1)
 
     return filename
