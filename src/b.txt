@@ -1,0 +1,7 @@
+5 hello
+6 goodbye
+1 apple
+2 big
+3 small
+9 tall
+12 short
